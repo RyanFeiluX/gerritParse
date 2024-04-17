@@ -1,0 +1,55 @@
+{
+    "findingCategory": [
+        "Functionality",
+        "Exception",
+        "Others",
+        "Unaccepted"
+    ],
+    "removeCommentDuplication": false,
+    "repoProfiles": {
+        "Module1": {
+            "Project_Pattern_RegEx": [
+                "M/ps.*"
+            ],
+            "Kind_Rules": [
+                {
+                    "Sample": "App/inc/Td.hpp",
+                    "Regex": "App/.*(\\.hpp|\\.cpp|\\.h|\\.c)",
+                    "Exclude": "App/DD/.*/tst/.*(\\.h|\\.c|\\.hpp|\\.cpp)",
+                    "Kind": "Product"
+                },
+                {
+                    "Sample": "App/tst/Test.cpp",
+                    "Regex": "App/.*/tst/.*(\\.h|\\.c|\\.hpp|\\.cpp)",
+                    "Exclude": null,
+                    "Kind": "UnitTest"
+                }
+            ],
+            "Tech_Rules": [
+                {
+                    "Sample": "App/inc/Td.hpp",
+                    "Regex": ".*",
+                    "Exclude": null,
+                    "Tech": "Tech1"
+                }
+            ],
+            "Status_Whitelist": [
+                "MERGED",
+                "NEW"
+            ],
+            "Patchset_Kind_Blacklist": [
+            ],
+            "Path_Blacklist": [
+                "/COMMIT_MSG"
+            ],
+            "File_Change_Type_Blacklist": [
+            ],
+            "Reviewer_Username_Blacklist": [
+                "myci"
+            ],
+            "Author_Username_Blacklist": [
+                "robot"
+            ]
+        }
+    }
+}
